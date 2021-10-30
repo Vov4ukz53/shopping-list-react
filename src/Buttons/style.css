@@ -1,0 +1,40 @@
+.section__buttons {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	
+}
+
+@media (max-width: 767px) {
+	.section__buttons {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+}
+
+.section__button {
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	color: #1283a5;
+	transition: all 0.3s;
+}
+
+.section__button:hover {
+	color: hsl(194, 80%, 26%);
+}
+
+.section__button:active {
+	color: hsl(194, 80%, 21%);
+}
+
+@media (max-width: 767px) {
+	.section__button:first-child {
+		margin-top: 15px;
+	}
+}
+
+.section__button:disabled {
+	color: rgb(184, 180, 180);
+	cursor: default;
+}
