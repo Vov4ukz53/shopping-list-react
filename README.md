@@ -47,6 +47,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - CSS
 - JavaScript/ES6+ Features
 
-## How to use
-![how to use](https://i.ibb.co/Cnf6k5h/Lista-zakupow1.gif)
 
