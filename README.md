@@ -2,7 +2,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-Here you can see my [demo](https://vov4ukz53.github.io/shopping-list/)
+Here you can see my [demo](https://vov4ukz53.github.io/shopping-list-react/)
 
 ## Available Scripts
 
