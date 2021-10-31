@@ -7,7 +7,7 @@ import Container from "./Container";
 
 const products = [
   { id: 1, content: "pomidory", done: false, },
-  { id: 2, content: "chekolada", done: true },
+  { id: 2, content: "chekolada", done: true, },
 ];
 const hideDoneProducts = false;
 
