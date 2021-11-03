@@ -24,6 +24,15 @@ function App() {
       products.filter(product => product.id !== id));
   }
 
+  const toggleDoneProduct = (id) => {
+    setProducts(products => products.map(product => {
+      if (product.id === id) {
+        return { ...product, done: !product.done }
+      }
+      return product;
+    }));
+  }
+
   return (
     <div className="App">
       <Container>
@@ -43,6 +52,7 @@ function App() {
               products={products}
               hideDone={hideDone}
               removeProduct={removeProduct}
+              toggleDoneProduct={toggleDoneProduct}
             />
           }
           extraSectionTopContent={
