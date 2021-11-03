@@ -15,30 +15,42 @@ function App() {
 
   const [hideDone, setHideDone] = useState(false);
 
+  const addNewProduct = (newProductContent) => {
+    setProducts(products => [
+      ...products,
+      {
+        content: newProductContent,
+        done: false,
+        id: products.length ? products[products.length - 1].id + 1 : 1,
+      },
+    ]);
+  };
+
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  }
+  };
 
   const removeProduct = (id) => {
     setProducts(products =>
       products.filter(product => product.id !== id));
-  }
+  };
 
   const toggleDoneProduct = (id) => {
     setProducts(products => products.map(product => {
       if (product.id === id) {
         return { ...product, done: !product.done };
       }
+
       return product;
     }));
-  }
+  };
 
   const setAllDone = () => {
     setProducts(products => products.map(product => ({
       ...product,
       done: true,
     })));
-  }
+  };
 
   return (
     <div className="App">
@@ -49,7 +61,7 @@ function App() {
 
         <Section
           title="Dodaj nowy artykuł"
-          body={<Form />}
+          body={<Form addNewProduct={addNewProduct} />}
         />
 
         <Section
@@ -75,6 +87,6 @@ function App() {
       </Container>
     </div>
   );
-}
+};
 
 export default App;
