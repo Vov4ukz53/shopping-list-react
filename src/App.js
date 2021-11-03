@@ -7,16 +7,21 @@ import Header from "./Header";
 import Container from "./Container";
 
 
-const products = [
-  { id: 1, content: "pomidory", done: false, },
-  { id: 2, content: "chekolada", done: true, },
-];
-
 function App() {
+  const [products, setProducts] = useState([
+    { id: 1, content: "pomidory", done: false, },
+    { id: 2, content: "chekolada", done: true, },
+  ]);
+
   const [hideDone, setHideDone] = useState(false);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
+  }
+
+  const removeProduct = (id) => {
+    setProducts(products =>
+      products.filter(product => product.id !== id));
   }
 
   return (
@@ -34,13 +39,18 @@ function App() {
         <Section
           title="Lista zakupów"
           body={
-            <Products products={products} hideDone={hideDone} />
+            <Products
+              products={products}
+              hideDone={hideDone}
+              removeProduct={removeProduct}
+            />
           }
           extraSectionTopContent={
             <Buttons
               products={products}
               hideDone={hideDone}
               toggleHideDone={toggleHideDone}
+              removeProduct={removeProduct}
             />
           }
         />
