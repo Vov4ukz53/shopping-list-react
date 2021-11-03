@@ -1,13 +1,13 @@
 import "./style.css";
 
-const Buttons = ({ products, hideDoneProducts }) => (
+const Buttons = ({ products, hideDone }) => (
 
     <div className="section__buttons">
         {products.length > 0 && (
             <>
                 <button
                     className="section__button">
-                    {products.some(({ done }) => done) && hideDoneProducts
+                    {products.some(({ done }) => done) && hideDone
                         ? "Pokaż" : "Ukryj"} zaznaczone
                 </button>
                 <button
