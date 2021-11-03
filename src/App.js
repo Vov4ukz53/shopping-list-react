@@ -27,10 +27,17 @@ function App() {
   const toggleDoneProduct = (id) => {
     setProducts(products => products.map(product => {
       if (product.id === id) {
-        return { ...product, done: !product.done }
+        return { ...product, done: !product.done };
       }
       return product;
     }));
+  }
+
+  const setAllDone = () => {
+    setProducts(products => products.map(product => ({
+      ...product,
+      done: true,
+    })));
   }
 
   return (
@@ -61,6 +68,7 @@ function App() {
               hideDone={hideDone}
               toggleHideDone={toggleHideDone}
               removeProduct={removeProduct}
+              setAllDone={setAllDone}
             />
           }
         />
