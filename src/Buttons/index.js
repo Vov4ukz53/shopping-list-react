@@ -1,14 +1,15 @@
 import "./style.css";
 
-const Buttons = ({ products, hideDone }) => (
+const Buttons = ({ products, hideDone, toggleHideDone }) => (
 
     <div className="section__buttons">
         {products.length > 0 && (
             <>
                 <button
-                    className="section__button">
+                    className="section__button"
+                    onClick={toggleHideDone}>
                     {products.some(({ done }) => done) && hideDone
-                        ? "Pokaż" : "Ukryj"} zaznaczone
+                    ? "Pokaż" : "Ukryj"} zaznaczone
                 </button>
                 <button
                     className="section__button"
