@@ -44,6 +44,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - HTML5
 - BEM
 - Flexbox
+- Grid
 - CSS
 - JavaScript/ES6+ Features
 - React
