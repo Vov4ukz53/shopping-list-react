@@ -8,10 +8,7 @@ import Container from "./Container";
 
 
 function App() {
-  const [products, setProducts] = useState([
-    { id: 1, content: "pomidory", done: false, },
-    { id: 2, content: "chekolada", done: true, },
-  ]);
+  const [products, setProducts] = useState([]);
 
   const [hideDone, setHideDone] = useState(false);
 
@@ -26,13 +23,13 @@ function App() {
     ]);
   };
 
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
-  };
-
   const removeProduct = (id) => {
     setProducts(products =>
       products.filter(product => product.id !== id));
+  };
+
+  const toggleHideDone = () => {
+    setHideDone(hideDone => !hideDone);
   };
 
   const toggleDoneProduct = (id) => {
