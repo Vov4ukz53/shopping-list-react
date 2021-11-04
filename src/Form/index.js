@@ -26,7 +26,9 @@ const Form = ({ addNewProduct }) => {
             value={newProductContent}
             onChange={productContent}
          />
-         <button className="form__button">Dodaj do listy</button>
+         <button className="form__button">
+            Dodaj do listy
+         </button>
       </form>
    );
 }

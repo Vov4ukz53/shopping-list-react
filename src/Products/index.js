@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Products = ({ products, hideDone, removeProduct, toggleDoneProduct, setAllDone }) => (
+const Products = ({ products, hideDone, removeProduct, toggleDoneProduct }) => (
    <ul className="shoppingList">
       {products.map((product) => (
          <li key={product.id}
