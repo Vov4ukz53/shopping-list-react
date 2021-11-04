@@ -21,7 +21,7 @@
 }
 
 .section__button:hover {
-	color: hsl(194, 80%, 26%);
+	text-decoration: underline;
 }
 
 .section__button:active {
