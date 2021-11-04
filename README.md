@@ -50,6 +50,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Create React App
 
 ### How to use
-![how to use](https://i.ibb.co/Cnf6k5h/Lista-zakupow1.gif)
+![how to use](https://i.ibb.co/KVBh5Fy/Lista-zakupow-react.gif)
 
 
