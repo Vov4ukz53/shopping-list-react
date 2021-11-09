@@ -11,7 +11,7 @@ const Form = ({ addNewProduct }) => {
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-      if (newProductContent !== "") {
+      if (newProductContent.trim() !== "") {
          addNewProduct(newProductContent.trim());
          setNewProductContent("");
       }
