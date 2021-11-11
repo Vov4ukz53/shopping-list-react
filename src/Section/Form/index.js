@@ -4,14 +4,22 @@ import "./style.css";
 const Form = ({ addNewProduct }) => {
    const [newProductContent, setNewProductContent] = useState("");
    const inputRef = useRef();
+   const [isEditing, setEditing] = useState(true);
 
    useEffect(() => {
       inputRef.current.focus()
-   });
+   }, []);
+
+   const focusInput = () => {
+      setEditing(isEditing);
+      if (isEditing) {
+         inputRef.current.focus();
+      }
+   };
 
    const productContent = ({ target }) => {
       setNewProductContent(target.value);
-   }
+   };
 
    const onFormSubmit = (event) => {
       event.preventDefault();
@@ -32,7 +40,10 @@ const Form = ({ addNewProduct }) => {
             onChange={productContent}
             ref={inputRef}
          />
-         <button className="form__button">
+         <button
+            className="form__button"
+            onClick={focusInput}
+         >
             Dodaj do listy
          </button>
       </form>
