@@ -3,15 +3,15 @@ import "./style.css";
 
 const Form = ({ addNewProduct }) => {
    const [newProductContent, setNewProductContent] = useState("");
-   const inputRef = useRef();
    const [isEditing, setEditing] = useState(true);
+   const inputRef = useRef();
 
    useEffect(() => {
       inputRef.current.focus()
    }, []);
 
    const focusInput = () => {
-      setEditing(isEditing);
+      setEditing(isEditing => isEditing);
       if (isEditing) {
          inputRef.current.focus();
       }
