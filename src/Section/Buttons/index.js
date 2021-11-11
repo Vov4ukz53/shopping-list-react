@@ -2,17 +2,17 @@ import "./style.css";
 
 const Buttons = ({ products, hideDone, toggleHideDone, setAllDone }) => (
 
-   <div className="section__buttons">
+   <div className="buttons">
       {products.length > 0 && (
          <>
             <button
-               className="section__button"
+               className="buttons__button"
                onClick={toggleHideDone}>
                {products.some(({ done }) => done) && hideDone
                   ? "Pokaż" : "Ukryj"} zaznaczone
             </button>
             <button
-               className="section__button"
+               className="buttons__button"
                disabled={products.every(({ done }) => done)}
                onClick={setAllDone}
             >
