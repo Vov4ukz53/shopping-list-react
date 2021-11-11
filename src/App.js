@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Form from "./Form";
-import Products from "./Products";
-import Buttons from "./Buttons";
+import Form from "./Section/Form";
+import Products from "./Section/Products";
+import Buttons from "./Section/Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
