@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Products from "./Products";
 import Buttons from "./Buttons";
@@ -8,7 +8,14 @@ import Container from "./Container";
 
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const getProductsFromLocaleStorage = () =>
+    JSON.parse(localStorage.getItem("products"))
+
+  const [products, setProducts] = useState(getProductsFromLocaleStorage);
+
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(products))
+  }, [products]);
 
   const [hideDone, setHideDone] = useState(false);
 
@@ -58,7 +65,11 @@ function App() {
 
         <Section
           title="Dodaj nowy artykuł"
-          body={<Form addNewProduct={addNewProduct} />}
+          body={
+            <Form
+              addNewProduct={addNewProduct}
+            />
+          }
         />
 
         <Section
