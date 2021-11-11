@@ -1,9 +1,9 @@
-.shoppingList {
+.products {
 	padding: 20px;
 	margin-bottom: 0;
 }
 
-.shoppingList__item {
+.products__item {
 	display: grid;
 	grid-template-columns: 50px 1fr 50px;
 	align-items: center;
@@ -13,25 +13,25 @@
 	word-break: break-word;
 }
 
-.shoppingList__item--hidden {
+.products__item--hidden {
 	display: none;
 }
 
 @media (max-width: 767px) {
-	.shoppingList__item {
+	.products__item {
 		grid-template-columns: 40px 1fr 40px;
 	}
 }
 
-.shoppingList__item:last-child {
+.products__item:last-child {
 	margin-bottom: 0;
 }
 
-.shoppingList__itemContent--done {
+.products__itemContent--done {
 	text-decoration: line-through;
 }
 
-.shoppingList__itemButton {
+.products__itemButton {
 	width: 30px;
 	height: 30px;
 	padding: 0;
@@ -43,38 +43,38 @@
 	box-shadow: 1px 2px 3px #000;
 }
 
-.shoppingList__itemButton:hover{
+.products__itemButton:hover{
 	background-color: hsl(88, 97%, 21%);
 }
 
-.shoppingList__itemButton:active{
+.products__itemButton:active{
 	transform: translate(2px,2px);
 	box-shadow: none;
 }
 
 @media (max-width: 767px) {
-	.shoppingList__itemButton {
+	.products__itemButton {
 		justify-self: start;
 	}
 }
 
-.shoppingList__itemButton--done {
+.products__itemButton--done {
 	background-image: url("../../img/arrow.png");
 	background-repeat: no-repeat;
 	background-position: 50% 4px;
 }
 
-.shoppingList__itemButton--delete {
+.products__itemButton--delete {
 	background: url("../../img/Black_Trash.png") 50% no-repeat;
 	background-color: rgb(216, 47, 35);
 }
 
-.shoppingList__itemButton--delete:hover{
+.products__itemButton--delete:hover{
 	background-color: hsl(4, 72%, 54%);
 }
 
 @media (max-width: 767px) {
-	.shoppingList__itemButton--delete {
+	.products__itemButton--delete {
 		justify-self: end;
 	}
 }

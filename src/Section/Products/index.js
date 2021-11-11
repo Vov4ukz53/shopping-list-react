@@ -1,27 +1,27 @@
 import "./style.css";
 
 const Products = ({ products, hideDone, removeProduct, toggleDoneProduct }) => (
-   <ul className="shoppingList">
+   <ul className="products">
       {products.map((product) => (
          <li key={product.id}
-            className={`shoppingList__item${product.done && hideDone
-               ? " shoppingList__item--hidden"
+            className={`products__item${product.done && hideDone
+               ? " products__item--hidden"
                : ""}`}>
             <button
-               className={`shoppingList__itemButton${product.done
-                  ? " shoppingList__itemButton--done"
+               className={`products__itemButton${product.done
+                  ? " products__itemButton--done"
                   : ""}`}
                onClick={() => toggleDoneProduct(product.id)}
             >
             </button>
             <span
-               className={`"shoppingList__itemContent${product.done
-                  ? " shoppingList__itemContent--done"
+               className={`"products__itemContent${product.done
+                  ? " products__itemContent--done"
                   : ""}`}>
                {product.content}
             </span>
             <button
-               className="shoppingList__itemButton shoppingList__itemButton--delete"
+               className="products__itemButton products__itemButton--delete"
                onClick={() => removeProduct(product.id)}
             >
             </button>
