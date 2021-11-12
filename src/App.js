@@ -9,7 +9,7 @@ import Container from "./Container";
 
 function App() {
   const getProductsFromLocaleStorage = () =>
-    JSON.parse(localStorage.getItem("products") || []);
+    JSON.parse(localStorage.getItem("products")) || [];
 
   const [products, setProducts] = useState(getProductsFromLocaleStorage);
 
