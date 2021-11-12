@@ -14,7 +14,6 @@ const Form = ({ addNewProduct }) => {
       setEditing(isEditing => isEditing);
       if (isEditing) {
          inputRef.current.focus();
-         inputRef.current.placeholder = "";
       }
    };
 
