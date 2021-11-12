@@ -82,7 +82,7 @@ function App() {
               toggleDoneProduct={toggleDoneProduct}
             />
           }
-          extraSectionTopContent={
+          extraHeaderContent={
             <Buttons
               products={products}
               hideDone={hideDone}
