@@ -23,15 +23,16 @@ const Form = ({ addNewProduct }) => {
 
    const onFormSubmit = (event) => {
       event.preventDefault();
+      const trimedNewProductContent = newProductContent.trim();
 
-      if (newProductContent.trim() !== "") {
-         addNewProduct(newProductContent.trim());
+      if (trimedNewProductContent !== "") {
+         addNewProduct(trimedNewProductContent);
          setNewProductContent("");
       }
    };
 
    return (
-      <form className="form js-form" onSubmit={onFormSubmit}>
+      <form className="form" onSubmit={onFormSubmit}>
          <input
             className="form__input"
             type="text" name="product"
