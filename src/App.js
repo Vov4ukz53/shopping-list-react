@@ -6,15 +6,19 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+const getInitialProducts = () => {
+  const productsFromLocaleStorage = localStorage.getItem("products");
+
+  return productsFromLocaleStorage
+    ? JSON.parse(localStorage.getItem("products"))
+    : [];
+};
 
 function App() {
-  const getProductsFromLocaleStorage = () =>
-    JSON.parse(localStorage.getItem("products")) || [];
-
-  const [products, setProducts] = useState(getProductsFromLocaleStorage);
+  const [products, setProducts] = useState(getInitialProducts);
 
   useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(products))
+    localStorage.setItem("products", JSON.stringify(products));
   }, [products]);
 
   const [hideDone, setHideDone] = useState(false);
