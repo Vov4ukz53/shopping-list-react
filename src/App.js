@@ -1,64 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Form from "./Section/Form";
 import Products from "./Section/Products";
 import Buttons from "./Section/Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
+import { useProducts } from "./useProducts";
 
-const getInitialProducts = () => {
-  const productsFromLocaleStorage = localStorage.getItem("products");
-
-  return productsFromLocaleStorage
-    ? JSON.parse(localStorage.getItem("products"))
-    : [];
-};
 
 function App() {
-  const [products, setProducts] = useState(getInitialProducts);
-
-  useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(products));
-  }, [products]);
-
   const [hideDone, setHideDone] = useState(false);
-
-  const addNewProduct = (newProductContent) => {
-    setProducts(products => [
-      ...products,
-      {
-        content: newProductContent,
-        done: false,
-        id: products.length ? products[products.length - 1].id + 1 : 1,
-      },
-    ]);
-  };
-
-  const removeProduct = (id) => {
-    setProducts(products =>
-      products.filter(product => product.id !== id));
-  };
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
-  const toggleDoneProduct = (id) => {
-    setProducts(products => products.map(product => {
-      if (product.id === id) {
-        return { ...product, done: !product.done };
-      }
-
-      return product;
-    }));
-  };
-
-  const setAllDone = () => {
-    setProducts(products => products.map(product => ({
-      ...product,
-      done: true,
-    })));
-  };
+  const {
+    products,
+    addNewProduct,
+    removeProduct,
+    toggleDoneProduct,
+    setAllDone
+  } = useProducts();
 
   return (
     <div className="App">
