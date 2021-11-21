@@ -1,26 +1,23 @@
-import "./style.css";
+import { Wrapper, Button } from "./styled.js";
 
 const Buttons = ({ products, hideDone, toggleHideDone, setAllDone }) => (
 
-   <div className="buttons">
+   <Wrapper>
       {products.length > 0 && (
          <>
-            <button
-               className="buttons__button"
-               onClick={toggleHideDone}>
+            <Button onClick={toggleHideDone}>
                {products.some(({ done }) => done) && hideDone
                   ? "Pokaż" : "Ukryj"} zaznaczone
-            </button>
-            <button
-               className="buttons__button"
+            </Button>
+            <Button
                disabled={products.every(({ done }) => done)}
                onClick={setAllDone}
             >
                Zaznacz wszystkie
-            </button>
+            </Button>
          </>
       )}
-   </div >
+   </Wrapper >
 );
 
 
