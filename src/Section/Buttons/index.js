@@ -1,7 +1,6 @@
 import { Wrapper, Button } from "./styled.js";
 
 const Buttons = ({ products, hideDone, toggleHideDone, setAllDone }) => (
-
    <Wrapper>
       {products.length > 0 && (
          <>
