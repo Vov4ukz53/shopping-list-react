@@ -4,7 +4,7 @@ const getInitialProducts = () => {
    const productsFromLocaleStorage = localStorage.getItem("products");
 
    return productsFromLocaleStorage
-      ? JSON.parse(localStorage.getItem("products"))
+      ? JSON.parse(productsFromLocaleStorage)
       : [];
 };
 
