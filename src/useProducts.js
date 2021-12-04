@@ -49,6 +49,10 @@ export const useProducts = () => {
    };
 
    return {
-      products, addNewProduct, removeProduct, toggleDoneProduct, setAllDone
+      products,
+      addNewProduct,
+      removeProduct,
+      toggleDoneProduct,
+      setAllDone,
    };
 }
