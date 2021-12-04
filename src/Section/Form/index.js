@@ -9,10 +9,6 @@ const Form = ({ addNewProduct }) => {
       inputRef.current.focus()
    }, []);
 
-   const focusInput = () => {
-      inputRef.current.focus();
-   };
-
    const productContent = ({ target }) => {
       setNewProductContent(target.value);
    };
@@ -24,6 +20,7 @@ const Form = ({ addNewProduct }) => {
       if (trimedNewProductContent !== "") {
          addNewProduct(trimedNewProductContent);
          setNewProductContent("");
+         inputRef.current.focus();
       }
    };
 
@@ -38,7 +35,6 @@ const Form = ({ addNewProduct }) => {
          />
          <Button
             className="form__button"
-            onClick={focusInput}
          >
             Dodaj do listy
          </Button>
