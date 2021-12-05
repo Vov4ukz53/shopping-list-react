@@ -10,7 +10,10 @@ const Buttons = () => {
       <Wrapper>
          {products.length > 0 && (
             <>
-               <Button onClick={() => dispatch(toggleHideDone())}>
+               <Button
+                  disabled={products.every(({ done }) => !done)}
+                  onClick={() => dispatch(toggleHideDone())}
+               >
                   {hideDone ? "Pokaż" : "Ukryj"} zaznaczone
                </Button>
                <Button
