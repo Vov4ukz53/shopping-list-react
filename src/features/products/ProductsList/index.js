@@ -1,6 +1,6 @@
 import { List, Item, Content, Button } from "./styled.js";
 
-const Products = ({ products, hideDone, removeProduct, toggleDoneProduct }) => (
+const ProductsList = ({ products, hideDone, removeProduct, toggleDoneProduct }) => (
    <List>
       {products.map((product) => (
          <Item
@@ -25,4 +25,4 @@ const Products = ({ products, hideDone, removeProduct, toggleDoneProduct }) => (
    </List>
 )
 
-export default Products;
+export default ProductsList;
