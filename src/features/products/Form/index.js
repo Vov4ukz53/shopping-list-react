@@ -1,9 +1,14 @@
 import { useState, useRef, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { addProduct } from "../productsSlice.js";
 import { StyledForm, Input, Button } from "./styled.js";
 
-const Form = ({ addNewProduct }) => {
+
+const Form = () => {
    const [newProductContent, setNewProductContent] = useState("");
    const inputRef = useRef();
+   const dispatch = useDispatch();
 
    useEffect(() => {
       inputRef.current.focus()
@@ -18,7 +23,11 @@ const Form = ({ addNewProduct }) => {
       const trimedNewProductContent = newProductContent.trim();
 
       if (trimedNewProductContent !== "") {
-         addNewProduct(trimedNewProductContent);
+         dispatch(addProduct({
+            content: trimedNewProductContent,
+            done: false,
+            id: nanoid(),
+         }));
          setNewProductContent("");
          inputRef.current.focus();
       }
