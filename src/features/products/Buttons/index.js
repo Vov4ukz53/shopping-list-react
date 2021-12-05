@@ -23,7 +23,7 @@ const Buttons = () => {
          )}
       </Wrapper >
    );
-}
+};
 
 
 export default Buttons;

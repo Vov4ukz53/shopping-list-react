@@ -7,26 +7,24 @@ const productsSlice = createSlice({
       hideDone: false,
    },
    reducers: {
-      addProduct: (previousState, action) => {
-         previousState.products.push(action.payload);
+      addProduct: ({ products }, { payload: newProduct }) => {
+         products.push(newProduct);
       },
       toggleHideDone: state => {
          state.hideDone = !state.hideDone;
       },
-      toggleDoneProduct: (state, action) => {
-         const index = state.products.findIndex(
-            product => product.id === action.payload);
-         state.products[index].done = !state.products[index].done;
+      toggleDoneProduct: ({ products }, { payload: productId }) => {
+         const index = products.findIndex(
+            product => product.id === productId);
+         products[index].done = !products[index].done;
       },
-      removeProduct: (previousState, action) => {
-         const index = previousState.products.findIndex(
-            product => product.id === action.payload);
-         previousState.products.splice(index, 1);
+      removeProduct: ({ products }, { payload: productId }) => {
+         const index = products.findIndex(
+            product => product.id === productId);
+         products.splice(index, 1);
       },
-      setAllDone: (state) => {
-         for (const product of state.products) {
-            product.done = true;
-         }
+      setAllDone: ({ products }) => {
+         products.forEach(product => product.done = true);
       },
    },
 });
