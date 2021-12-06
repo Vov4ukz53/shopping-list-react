@@ -1,23 +1,33 @@
 import { Wrapper, Button } from "./styled.js";
 import { useSelector, useDispatch } from "react-redux";
-import { selectProducts, toggleHideDone, setAllDone } from "../productsSlice.js";
+import {
+   selectProducts,
+   toggleHideDone,
+   setAllDone,
+   selectAllProductsMarked,
+   selectNoMarkedProducts,
+   selectProductsAreAvailable
+} from "../productsSlice.js";
 
 const Buttons = () => {
-   const { products, hideDone } = useSelector(selectProducts);
+   const { hideDone } = useSelector(selectProducts);
+   const allProductsMarked = useSelector(selectAllProductsMarked);
+   const noMarkedProducts = useSelector(selectNoMarkedProducts);
+   const productsAreAvailable = useSelector(selectProductsAreAvailable);
    const dispatch = useDispatch();
 
    return (
       <Wrapper>
-         {products.length > 0 && (
+         {productsAreAvailable && (
             <>
                <Button
-                  disabled={products.every(({ done }) => !done)}
+                  disabled={noMarkedProducts}
                   onClick={() => dispatch(toggleHideDone())}
                >
                   {hideDone ? "Pokaż" : "Ukryj"} zaznaczone
                </Button>
                <Button
-                  disabled={products.every(({ done }) => done)}
+                  disabled={allProductsMarked}
                   onClick={() => dispatch(setAllDone())}
                >
                   Zaznacz wszystkie
