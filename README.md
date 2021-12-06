@@ -42,12 +42,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Used Technologies:
 - HTML5
-- BEM
 - Flexbox
 - Grid
 - CSS
 - JavaScript/ES6+ Features
-- React
+- React + Redux
 - Create React App
 - React Hooks
 - Custom Hooks
