@@ -1,5 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectProducts, toggleDoneProduct, removeProduct } from "../productsSlice.js";
+import {
+   selectProducts,
+   toggleDoneProduct,
+   removeProduct
+} from "../productsSlice.js";
 import { List, Item, Content, Button } from "./styled.js";
 
 const ProductsList = () => {
