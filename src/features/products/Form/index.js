@@ -14,7 +14,7 @@ const Form = () => {
       inputRef.current.focus()
    }, []);
 
-   const productContent = ({ target }) => {
+   const onProductInputChange = ({ target }) => {
       setNewProductContent(target.value);
    };
 
@@ -39,7 +39,7 @@ const Form = () => {
             type="text" name="product"
             placeholder="Napisz artykuł!"
             value={newProductContent}
-            onChange={productContent}
+            onChange={onProductInputChange}
             ref={inputRef}
          />
          <Button
