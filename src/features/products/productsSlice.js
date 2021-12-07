@@ -37,11 +37,11 @@ export const {
    setAllDone } = productsSlice.actions;
 export const selectProducts = state => state.products;
 
-export const selectAllProductsMarked = state =>
+export const selectAreAllProductsDone = state =>
    selectProducts(state).products.every(({ done }) => done);
-export const selectNoMarkedProducts = state =>
+export const selectAreAllProductsNotDone = state =>
    selectProducts(state).products.every(({ done }) => !done);
-export const selectProductsAreAvailable = state =>
+export const selectAreProductsNotEmpty = state =>
    selectProducts(state).products.length > 0;
 
 export default productsSlice.reducer;

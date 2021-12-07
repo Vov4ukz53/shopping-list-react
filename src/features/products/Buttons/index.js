@@ -4,30 +4,30 @@ import {
    selectProducts,
    toggleHideDone,
    setAllDone,
-   selectAllProductsMarked,
-   selectNoMarkedProducts,
-   selectProductsAreAvailable
+   selectAreAllProductsDone,
+   selectAreAllProductsNotDone,
+   selectAreProductsNotEmpty
 } from "../productsSlice.js";
 
 const Buttons = () => {
    const { hideDone } = useSelector(selectProducts);
-   const allProductsMarked = useSelector(selectAllProductsMarked);
-   const noMarkedProducts = useSelector(selectNoMarkedProducts);
-   const productsAreAvailable = useSelector(selectProductsAreAvailable);
+   const areAllProductsDone = useSelector(selectAreAllProductsDone);
+   const areAllProductsNotDone = useSelector(selectAreAllProductsNotDone);
+   const areProductsNotEmpty = useSelector(selectAreProductsNotEmpty);
    const dispatch = useDispatch();
 
    return (
       <Wrapper>
-         {productsAreAvailable && (
+         {areProductsNotEmpty && (
             <>
                <Button
-                  disabled={noMarkedProducts}
+                  disabled={areAllProductsNotDone}
                   onClick={() => dispatch(toggleHideDone())}
                >
                   {hideDone ? "Pokaż" : "Ukryj"} zaznaczone
                </Button>
                <Button
-                  disabled={allProductsMarked}
+                  disabled={areAllProductsDone}
                   onClick={() => dispatch(setAllDone())}
                >
                   Zaznacz wszystkie
