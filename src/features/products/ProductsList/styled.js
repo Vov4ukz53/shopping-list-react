@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
-import arrow from "./arrow.png";
-import basket from "./basket.png";
+import arrow from "./img/icons/arrow.png";
+import basket from "./img/icons/basket.png";
 
 export const List = styled.ul`
    padding: 20px;
