@@ -1,13 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import {
-   selectProducts,
    toggleDoneProduct,
-   removeProduct
+   removeProduct,
+   selectProducts,
+   selectHideDone
 } from "../productsSlice.js";
 import { List, Item, Content, Button } from "./styled.js";
 
 const ProductsList = () => {
-   const { products, hideDone } = useSelector(selectProducts);
+   const products = useSelector(selectProducts);
+   const hideDone = useSelector(selectHideDone);
    const dispatch = useDispatch();
 
    return (

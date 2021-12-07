@@ -35,13 +35,17 @@ export const {
    toggleDoneProduct,
    removeProduct,
    setAllDone } = productsSlice.actions;
-export const selectProducts = state => state.products;
+
+const selectProductsState = state => state.products;
+
+export const selectProducts = state => selectProductsState(state).products;
+export const selectHideDone = state => selectProductsState(state).hideDone;
 
 export const selectAreAllProductsDone = state =>
-   selectProducts(state).products.every(({ done }) => done);
+   selectProducts(state).every(({ done }) => done);
 export const selectAreAllProductsNotDone = state =>
-   selectProducts(state).products.every(({ done }) => !done);
+   selectProducts(state).every(({ done }) => !done);
 export const selectAreProductsNotEmpty = state =>
-   selectProducts(state).products.length > 0;
+   selectProducts(state).length > 0;
 
 export default productsSlice.reducer;
