@@ -1,4 +1,4 @@
-import { MainTitle } from "./styled.js"
+import { MainTitle } from "./styled.js";
 
 const Header = ({ title }) => (
     <MainTitle>{title}</MainTitle>

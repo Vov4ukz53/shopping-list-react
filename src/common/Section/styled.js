@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
    padding: 20px;
-	border-bottom: 1px solid ${({theme}) => theme.colors.borderColor};
+	border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -20,6 +20,7 @@ export const HeaderTitle = styled.h2`
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       flex-basis: 100%;
+      margin-bottom: 15px;
    }
 `;
 

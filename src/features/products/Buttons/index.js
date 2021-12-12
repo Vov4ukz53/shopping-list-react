@@ -1,4 +1,5 @@
-import { Wrapper, Button } from "./styled.js";
+import { Wrapper } from "./styled.js";
+import {Button} from "./../Button";
 import { useSelector, useDispatch } from "react-redux";
 import {
    selectProducts,

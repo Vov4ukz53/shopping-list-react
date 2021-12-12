@@ -5,6 +5,7 @@ const productsSlice = createSlice({
    initialState: {
       products: [],
       hideDone: false,
+      loading: false,
    },
    reducers: {
       addProduct: ({ products }, { payload: newProduct }) => {
@@ -26,6 +27,13 @@ const productsSlice = createSlice({
       setAllDone: ({ products }) => {
          products.forEach(product => product.done = true);
       },
+      fetchExampleProducts: state => {
+         state.loading = !state.loading
+      },
+      setProducts: (state, { payload: exampleProducts }) => {
+         state.products = exampleProducts;
+         state.loading = false;
+      },
    },
 });
 
@@ -34,12 +42,15 @@ export const {
    toggleHideDone,
    toggleDoneProduct,
    removeProduct,
-   setAllDone } = productsSlice.actions;
+   setAllDone,
+   fetchExampleProducts,
+   setProducts } = productsSlice.actions;
 
 const selectProductsState = state => state.products;
 
 export const selectProducts = state => selectProductsState(state).products;
 export const selectHideDone = state => selectProductsState(state).hideDone;
+export const selectLoading = state => selectProductsState(state).loading;
 
 export const selectAreAllProductsDone = state =>
    selectProducts(state).every(({ done }) => done);
