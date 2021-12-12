@@ -6,6 +6,7 @@ const productsSlice = createSlice({
       products: [],
       hideDone: false,
       loading: false,
+      error: false,
    },
    reducers: {
       addProduct: ({ products }, { payload: newProduct }) => {
@@ -34,6 +35,10 @@ const productsSlice = createSlice({
          state.products = exampleProducts;
          state.loading = false;
       },
+      setError: state => {
+         state.error = !state.error;
+         state.loading = !state.loading;
+      },
    },
 });
 
@@ -44,6 +49,7 @@ export const {
    removeProduct,
    setAllDone,
    fetchExampleProducts,
+   setError,
    setProducts } = productsSlice.actions;
 
 const selectProductsState = state => state.products;
@@ -51,12 +57,21 @@ const selectProductsState = state => state.products;
 export const selectProducts = state => selectProductsState(state).products;
 export const selectHideDone = state => selectProductsState(state).hideDone;
 export const selectLoading = state => selectProductsState(state).loading;
+export const selectError = state => selectProductsState(state).error;
 
 export const selectAreAllProductsDone = state =>
    selectProducts(state).every(({ done }) => done);
+
 export const selectAreAllProductsNotDone = state =>
    selectProducts(state).every(({ done }) => !done);
+
 export const selectAreProductsNotEmpty = state =>
    selectProducts(state).length > 0;
+   
+export const selectAreExampleProducts = state =>
+   selectProducts(state).find(product =>
+      product.id === "8wROpJA5ZbnXAymcQ4IB2"
+      || "9nnWI7ma6t58_k9hRvRk2"
+      || "Z3MfgjbWPl1MGS7TRtDO0");
 
 export default productsSlice.reducer;

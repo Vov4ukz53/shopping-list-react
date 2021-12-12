@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.button`
    cursor: pointer;
@@ -6,6 +6,11 @@ export const Button = styled.button`
 	background: transparent;
 	color: ${({ theme }) => theme.colors.mainButton};
 	transition: all 0.3s;
+
+   ${({ error }) => error && css`
+      color:${({ theme }) => theme.colors.firebrick};
+      text-decoration:none;
+   `}
 
    &:hover{
       text-decoration: underline;

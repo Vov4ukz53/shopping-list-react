@@ -2,16 +2,16 @@ import { Wrapper } from "./styled.js";
 import {Button} from "./../Button";
 import { useSelector, useDispatch } from "react-redux";
 import {
-   selectProducts,
    toggleHideDone,
    setAllDone,
    selectAreAllProductsDone,
    selectAreAllProductsNotDone,
-   selectAreProductsNotEmpty
+   selectAreProductsNotEmpty,
+   selectHideDone
 } from "../productsSlice.js";
 
 const Buttons = () => {
-   const { hideDone } = useSelector(selectProducts);
+   const hideDone = useSelector(selectHideDone);
    const areAllProductsDone = useSelector(selectAreAllProductsDone);
    const areAllProductsNotDone = useSelector(selectAreAllProductsNotDone);
    const areProductsNotEmpty = useSelector(selectAreProductsNotEmpty);
