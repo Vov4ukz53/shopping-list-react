@@ -35,9 +35,9 @@ const productsSlice = createSlice({
          state.products = exampleProducts;
          state.loading = false;
       },
-      setError: state => {
-         state.error = !state.error;
-         state.loading = !state.loading;
+      productsRequestFailed: state => {
+         state.error = true;
+         state.loading = false;
       },
    },
 });
@@ -49,7 +49,7 @@ export const {
    removeProduct,
    setAllDone,
    fetchExampleProducts,
-   setError,
+   productsRequestFailed,
    setProducts } = productsSlice.actions;
 
 const selectProductsState = state => state.products;
@@ -67,11 +67,11 @@ export const selectAreAllProductsNotDone = state =>
 
 export const selectAreProductsNotEmpty = state =>
    selectProducts(state).length > 0;
-   
+
 export const selectAreExampleProducts = state =>
-   selectProducts(state).find(product =>
-      product.id === "8wROpJA5ZbnXAymcQ4IB2"
-      || "9nnWI7ma6t58_k9hRvRk2"
-      || "Z3MfgjbWPl1MGS7TRtDO0");
+   selectProducts(state).some(({ id }) =>
+      id === "8wROpJA5ZbnXAymcQ4IB2"
+      || id === "9nnWI7ma6t58_k9hRvRk2"
+      || id === "Z3MfgjbWPl1MGS7TRtDO0");
 
 export default productsSlice.reducer;
