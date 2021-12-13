@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import { watchFetchExampleProducts } from "./features/products/productsSAGA";
+import rootSAGA from "./features/products/rootSAGA";
 import productsReducer from "./features/products/productsSlice";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -12,6 +12,6 @@ const store = configureStore({
     middleware: [sagaMiddleware],
 });
 
-sagaMiddleware.run(watchFetchExampleProducts);
+sagaMiddleware.run(rootSAGA);
 
 export default store;
