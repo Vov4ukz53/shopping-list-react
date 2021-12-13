@@ -1,6 +1,12 @@
-import { takeLatest, call, put, delay } from "redux-saga/effects";
-import { fetchExampleProducts, setProducts, productsRequestFailed } from "./productsSlice";
+import { takeLatest, call, put, delay, takeEvery, select } from "redux-saga/effects";
+import {
+    fetchExampleProducts,
+    setProducts,
+    productsRequestFailed,
+    selectProducts
+} from "./productsSlice";
 import { getExampleProducts } from "./getExampleProducts";
+import { saveProductsInLocaleStorage } from "./productsLocaleStorage";
 
 function* fetchExampleProductsHandler() {
     try {
@@ -13,6 +19,14 @@ function* fetchExampleProductsHandler() {
     }
 };
 
-export function* watchFetchExampleProducts() {
+function* saveProductsInLocaleStorageHandler() {
+    const products = yield select(selectProducts);
+    yield call(saveProductsInLocaleStorage, products);
+}
+
+function* productsSAGA() {
     yield takeLatest(fetchExampleProducts.type, fetchExampleProductsHandler);
+    yield takeEvery("*", saveProductsInLocaleStorageHandler);
 };
+
+export default productsSAGA;

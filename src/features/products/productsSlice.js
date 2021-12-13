@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getProductsFromLocaleStorage } from './productsLocaleStorage';
 
 const productsSlice = createSlice({
    name: 'products',
    initialState: {
-      products: [],
+      products: getProductsFromLocaleStorage(),
       hideDone: false,
       loading: false,
       error: false,
