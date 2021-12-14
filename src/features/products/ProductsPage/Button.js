@@ -4,7 +4,7 @@ export const Button = styled.button`
    cursor: pointer;
 	border: none;
 	background: transparent;
-	color: ${({ theme }) => theme.colors.mainButton};
+	color: ${({ theme }) => theme.colors.mainColor};
 	transition: all 0.3s;
 
    ${({ error }) => error && css`

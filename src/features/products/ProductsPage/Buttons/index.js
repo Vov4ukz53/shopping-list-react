@@ -1,5 +1,5 @@
 import { Wrapper } from "./styled.js";
-import {Button} from "./../Button";
+import { Button } from "../Button";
 import { useSelector, useDispatch } from "react-redux";
 import {
    toggleHideDone,
@@ -8,7 +8,7 @@ import {
    selectAreAllProductsNotDone,
    selectAreProductsNotEmpty,
    selectHideDone
-} from "../productsSlice.js";
+} from "../../productsSlice";
 
 const Buttons = () => {
    const hideDone = useSelector(selectHideDone);

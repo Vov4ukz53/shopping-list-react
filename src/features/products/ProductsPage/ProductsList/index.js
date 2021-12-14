@@ -4,7 +4,7 @@ import {
    removeProduct,
    selectProducts,
    selectHideDone
-} from "../productsSlice.js";
+} from "../../productsSlice";
 import { List, Item, Content, Button } from "./styled.js";
 
 const ProductsList = () => {

@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "./../Button";
+import { Button } from "../Button";
 import {
    fetchExampleProducts,
    selectError,
    selectLoading,
    selectAreExampleProducts
-} from "../productsSlice.js";
+} from "../../productsSlice.js";
 
 const ExampleProductsButton = () => {
    const loading = useSelector(selectLoading);
