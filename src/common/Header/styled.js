@@ -1,9 +1,26 @@
 import styled from "styled-components";
 
-export const MainTitle = styled.h1`
-   margin-top: 50px;
+export const StyledHeader = styled.header`
+   background: ${({ theme }) => theme.colors.mainColor};
+`;
+
+export const Body = styled.div`
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 40px;
+   padding: 15px 0;
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-      margin-top: 25px;
+      margin-bottom: 20px;
+      justify-content: center;
+      padding: 10px 0;
    }
+`;
+
+export const MainTitle = styled.h1`
+   margin: 0px;
+   color: ${({ theme }) => theme.colors.white};
+   font-size: 24px;
 `;
