@@ -5,7 +5,7 @@ import {
    selectProducts,
    selectHideDone
 } from "../../productsSlice";
-import { List, Item, Content, Button } from "./styled.js";
+import { List, Item, Content, Button, Link } from "./styled.js";
 
 const ProductsList = () => {
    const products = useSelector(selectProducts);
@@ -25,7 +25,9 @@ const ProductsList = () => {
                >
                </Button>
                <Content done={product.done}>
-                  {product.content}
+                  <Link to={`/producty/${product.id}`}>
+                     {product.content}
+                  </Link>
                </Content>
                <Button
                   remove
