@@ -3,7 +3,8 @@ const theme = {
       borderColor: "#e5e2e2",
       mainColor: "#1283a5",
       firebrick: "#B22222",
-      white: "#fff",
+      black: "#000000",
+      white: "#ffffff",
       linen: "#FAF0E6",
    },
    breakpoints: {
