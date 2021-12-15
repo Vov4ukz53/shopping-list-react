@@ -85,6 +85,6 @@ export const Button = styled.button`
 `;
 
 export const Link = styled(NavLink)`
-   color: ${({ theme }) => theme.colors.black};
+   color: ${({ theme }) => theme.colors.mainColor};
    text-decoration: none;
 `;
