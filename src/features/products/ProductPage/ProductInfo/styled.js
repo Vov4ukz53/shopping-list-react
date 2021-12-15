@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
    padding: 20px;
@@ -10,10 +10,16 @@ export const Wrapper = styled.div`
 `;
 
 export const Paragraph = styled.p`
-    border-bottom: 1px solid ${({ theme }) =>
+   border-bottom: 1px solid ${({ theme }) =>
       theme.colors.borderColor};
+
+   ${({ notFind }) => notFind && css`
+      padding: 20px;
+      margin: 0px;
+      color: ${({ theme }) => theme.colors.firebrick};
+   `}
 `;
 
 export const Strong = styled.strong`
-    letter-spacing: 1.1px;
+   letter-spacing: 1.1px;
 `;
