@@ -1,4 +1,5 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 import arrow from "./img/icons/arrow.png";
 import basket from "./img/icons/basket.png";
 
@@ -13,24 +14,24 @@ export const Item = styled.li`
 	align-items: center;
 	padding-bottom: 10px;
 	margin-bottom: 15px;
-	border-bottom: 1px solid ${({theme}) => theme.colors.borderColor};
+	border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
 	word-break: break-word;
 
    &:last-child {
 	   margin-bottom: 0px;
    }
 
-   ${({hidden}) => hidden && css`
+   ${({ hidden }) => hidden && css`
       display: none;
    `}
 
-   @media (max-width: ${({theme}) => theme.breakpoints.mobile}px) {
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
 		grid-template-columns: 40px 1fr 40px;
    }
 `;
 
 export const Content = styled.span`
-   ${({done}) => done && css`
+   ${({ done }) => done && css`
       text-decoration: line-through;
    `}
 `;
@@ -55,17 +56,17 @@ export const Button = styled.button`
    	box-shadow: none;
    }
 
-   @media (max-width: ${({theme}) => theme.breakpoints.mobile}px) {
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       justify-self: start;  
    }
 
-   ${({toggleDone}) => toggleDone && css`
+   ${({ toggleDone }) => toggleDone && css`
       background-image: url("${arrow}");
       background-repeat: no-repeat;
       background-position: 50% 4px;
    `}
 
-   ${({remove}) => remove && css`
+   ${({ remove }) => remove && css`
       background: url("${basket}") 50% no-repeat;
       background-color: rgb(216, 47, 35);
 
@@ -73,8 +74,13 @@ export const Button = styled.button`
          background-color: hsl(4, 72%, 54%);
       }
 
-      @media (max-width: ${({theme}) => theme.breakpoints.mobile}px) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
 		   justify-self: end;
       }
    `}
+`;
+
+export const Link = styled(NavLink)`
+   color: ${({theme}) => theme.colors.black};
+   text-decoration: none;
 `;
