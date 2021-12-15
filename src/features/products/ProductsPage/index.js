@@ -6,7 +6,7 @@ import ExampleProductsButton from "./ExampleProductsButton";
 import Form from "../ProductsPage/Form";
 import ProductsList from "../ProductsPage/ProductsList";
 
-function Products() {
+function ProductsPage() {
   return (
     <>
       <Header
@@ -29,4 +29,4 @@ function Products() {
   );
 };
 
-export default Products;
+export default ProductsPage;

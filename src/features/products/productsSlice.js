@@ -75,4 +75,7 @@ export const selectAreExampleProducts = state =>
       || id === "9nnWI7ma6t58_k9hRvRk2"
       || id === "Z3MfgjbWPl1MGS7TRtDO0");
 
+export const selectGetProductById = (state, productId) =>
+   selectProducts(state).find(({ id }) => id === productId);
+
 export default productsSlice.reducer;

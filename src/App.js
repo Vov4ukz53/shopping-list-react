@@ -1,17 +1,21 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
-import Products from "./features/products/ProductsPage";
-import Author from "./features/author/Author";
+import ProductsPage from "./features/products/ProductsPage";
+import ProductPage from "./features/products/ProductPage";
+import AuthorPage from "./features/author/AuthorPage";
 import { Redirect } from "react-router-dom";
 
 const App = () => (
    <HashRouter>
       <Switch>
+         <Route path="/producty/:id">
+            <ProductPage />
+         </Route>
          <Route path="/producty">
-            <Products />
+            <ProductsPage />
          </Route>
          <Route path="/author">
-            <Author />
+            <AuthorPage />
          </Route>
          <Route path="/">
             <Redirect to="/producty" />
