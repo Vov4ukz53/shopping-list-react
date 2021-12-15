@@ -6,7 +6,6 @@ import ProductInfo from "./ProductInfo/index";
 
 
 function ProductPage() {
-
   return (
     <>
       <Header

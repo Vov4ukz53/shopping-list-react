@@ -13,14 +13,18 @@ export const Header = styled.div`
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+   padding: 10px;
+   }
 `;
 
 export const HeaderTitle = styled.h2`
 	margin: 0;
 
    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-      flex-basis: 100%;
-      margin-bottom: 15px;
+   flex-basis: 100%;
+	margin-bottom: 15px;
    }
 `;
 

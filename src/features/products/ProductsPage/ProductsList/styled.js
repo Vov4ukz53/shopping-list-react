@@ -6,6 +6,10 @@ import basket from "./img/icons/basket.png";
 export const List = styled.ul`
    padding: 20px;
 	margin-bottom: 0;
+
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+      padding: 10px;
+   }
 `;
 
 export const Item = styled.li`
@@ -81,6 +85,6 @@ export const Button = styled.button`
 `;
 
 export const Link = styled(NavLink)`
-   color: ${({theme}) => theme.colors.black};
+   color: ${({ theme }) => theme.colors.black};
    text-decoration: none;
 `;

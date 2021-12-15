@@ -4,8 +4,9 @@ export const StyledForm = styled.form`
    display: flex;
 	padding: 20px;
 
-   @media (max-width: 767px) {
-		flex-direction: column;
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+      flex-direction: column;
+      padding: 10px;
    }
 `;
 
