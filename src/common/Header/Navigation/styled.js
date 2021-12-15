@@ -34,4 +34,8 @@ export const Link = styled(NavLink)`
    &:hover{
       color: ${({ theme }) => theme.colors.linen};
    }
+
+   &.active{
+      font-weight: 700;
+   }
 `;
