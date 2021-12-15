@@ -13,13 +13,13 @@ function ProductInfo() {
          ?
          <Wrapper>
             <Paragraph>
-               <Strong>Nazwa produktu</Strong> - {product.content}!
+               <Strong>Nazwa produktu:</Strong> {product.content}!
             </Paragraph>
             <Paragraph>
-               <Strong>Product zaznaczony</Strong> - {product.done ? "Tak!" : "Nie!"}
+               <Strong>Product zaznaczony:</Strong> {product.done ? "Tak!" : "Nie!"}
             </Paragraph>
          </Wrapper>
-         : "Nie znaleziono produktu!"
+         : <Paragraph notFind>Nie znaleziono produktu!</Paragraph>
    );
 };
 
