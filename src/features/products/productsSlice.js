@@ -69,13 +69,28 @@ export const selectAreAllProductsNotDone = state =>
 export const selectAreProductsNotEmpty = state =>
    selectProducts(state).length > 0;
 
-export const selectAreExampleProducts = state =>
-   selectProducts(state).some(({ id }) =>
-      id === "8wROpJA5ZbnXAymcQ4IB2"
-      || id === "9nnWI7ma6t58_k9hRvRk2"
-      || id === "Z3MfgjbWPl1MGS7TRtDO0");
+export const selectAreExampleProducts = state => {
+   const firstId = "8wROpJA5ZbnXAymcQ4IB2";
+   const secondId = "9nnWI7ma6t58_k9hRvRk2";
+   const thirdId = "Z3MfgjbWPl1MGS7TRtDO0";
+
+   return selectProducts(state).some(({ id }) =>
+      id === firstId || id === secondId || id === thirdId
+   );
+};
 
 export const selectGetProductById = (state, productId) =>
    selectProducts(state).find(({ id }) => id === productId);
+
+export const selectProductsByQuery = (state, query) => {
+   const products = selectProducts(state);
+
+   if (!query || query.trim() === "") {
+      return products;
+   }
+
+   return products.filter(({ content }) =>
+      content.toUpperCase().includes(query.trim().toUpperCase()));
+};
 
 export default productsSlice.reducer;

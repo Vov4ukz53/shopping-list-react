@@ -2,13 +2,18 @@ import { useSelector, useDispatch } from "react-redux";
 import {
    toggleDoneProduct,
    removeProduct,
-   selectProducts,
-   selectHideDone
+   selectHideDone,
+   selectProductsByQuery
 } from "../../productsSlice";
 import { List, Item, Content, Button, Link } from "./styled.js";
+import { useLocation } from "react-router-dom";
 
 const ProductsList = () => {
-   const products = useSelector(selectProducts);
+   const location = useLocation();
+   const searchParams = new URLSearchParams(location.search);
+   const query = searchParams.get("szukaj");
+
+   const products = useSelector(state => selectProductsByQuery(state, query));
    const hideDone = useSelector(selectHideDone);
    const dispatch = useDispatch();
 

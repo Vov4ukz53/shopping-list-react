@@ -5,6 +5,7 @@ import Buttons from "../ProductsPage/Buttons";
 import ExampleProductsButton from "./ExampleProductsButton";
 import Form from "../ProductsPage/Form";
 import ProductsList from "../ProductsPage/ProductsList";
+import Search from "./Search";
 
 function ProductsPage() {
   return (
@@ -17,6 +18,11 @@ function ProductsPage() {
           title="Dodaj nowy artykuł"
           body={<Form />}
           extraHeaderContent={<ExampleProductsButton />}
+        />
+
+        <Section
+          title="Wyszukiwarka"
+          body={<Search />}
         />
 
         <Section
