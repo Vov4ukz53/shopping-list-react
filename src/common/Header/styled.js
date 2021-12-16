@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
@@ -19,8 +20,10 @@ export const Body = styled.div`
    }
 `;
 
-export const MainTitle = styled.h1`
+export const Link = styled(NavLink)`
    margin: 0px;
    color: ${({ theme }) => theme.colors.white};
    font-size: 24px;
+   text-decoration: none;
+   font-weight: 700;
 `;
