@@ -26,7 +26,7 @@ const ExampleProductsButton = () => {
                } else if (loading) {
                   return "Ładowanie...";
                } else if (areExampleProducts) {
-                  return "Producty pobrane";
+                  return "Produkty pobrane";
                } else {
                   return "Pobierz przykladowe producty";
                }
