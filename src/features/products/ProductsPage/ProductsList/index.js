@@ -6,13 +6,11 @@ import {
    selectProductsByQuery
 } from "../../productsSlice";
 import { List, Item, Content, Button, Link } from "./styled.js";
-import { useLocation } from "react-router-dom";
+import { searchQueryParamsName } from "../searchQueryParamsName";
+import { useQueryParameter } from "../queryParameters";
 
 const ProductsList = () => {
-   const location = useLocation();
-   const searchParams = new URLSearchParams(location.search);
-   const query = searchParams.get("szukaj");
-
+   const query = useQueryParameter(searchQueryParamsName);
    const products = useSelector(state => selectProductsByQuery(state, query));
    const hideDone = useSelector(selectHideDone);
    const dispatch = useDispatch();
