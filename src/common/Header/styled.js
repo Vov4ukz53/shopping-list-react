@@ -20,7 +20,7 @@ export const Body = styled.div`
    }
 `;
 
-export const Link = styled(NavLink)`
+export const Logo = styled(NavLink)`
    margin: 0px;
    color: ${({ theme }) => theme.colors.white};
    font-size: 24px;

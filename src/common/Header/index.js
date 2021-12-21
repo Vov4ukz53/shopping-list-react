@@ -1,12 +1,12 @@
 import Container from "../Container/index.js";
 import Navigation from "./Navigation/index.js";
-import { StyledHeader, Body, Link } from "./styled.js";
+import { StyledHeader, Body, Logo } from "./styled.js";
 
 const Header = ({ title }) => (
    <StyledHeader>
       <Container>
          <Body>
-            <Link to="/producty">{title}</Link>
+            <Logo to="/producty">{title}</Logo>
             <Navigation />
          </Body>
       </Container>
