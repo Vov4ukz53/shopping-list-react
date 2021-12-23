@@ -21,10 +21,5 @@ export const Header = styled.div`
 
 export const HeaderTitle = styled.h2`
 	margin: 0;
-
-   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-   flex-basis: 100%;
-	margin-bottom: 15px;
-   }
 `;
 
