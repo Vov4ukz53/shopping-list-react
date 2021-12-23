@@ -30,7 +30,7 @@ const productsSlice = createSlice({
          products.forEach(product => product.done = true);
       },
       fetchExampleProducts: state => {
-         state.loading = !state.loading
+         state.loading = !state.loading;
       },
       setProducts: (state, { payload: exampleProducts }) => {
          state.products = exampleProducts;
