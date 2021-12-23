@@ -1,9 +1,8 @@
 import React from "react";
-import { HashRouter, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import ProductsPage from "./features/products/ProductsPage";
 import ProductPage from "./features/products/ProductPage";
 import AuthorPage from "./features/author/AuthorPage";
-import { Redirect } from "react-router-dom";
 
 const App = () => (
    <HashRouter>

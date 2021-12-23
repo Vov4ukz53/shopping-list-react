@@ -1,8 +1,7 @@
 import Container from "../../common/Container";
-import { Paragraph, Wrapper, Strong, Div } from "./styled";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
-
+import { Paragraph, Wrapper, Strong, Div } from "./styled";
 
 function AuthorPage() {
    return (
