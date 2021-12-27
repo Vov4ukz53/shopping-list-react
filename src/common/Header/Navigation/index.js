@@ -9,7 +9,7 @@ function Navigation() {
                <Link to="/producty">Producty</Link>
             </Item>
             <Item>
-               <Link to="/author">O autorze</Link>
+               <Link to="/autor">O autorze</Link>
             </Item>
          </List>
       </StyledNavigation>

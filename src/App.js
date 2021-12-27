@@ -13,7 +13,7 @@ const App = () => (
          <Route path="/producty">
             <ProductsPage />
          </Route>
-         <Route path="/author">
+         <Route path="/autor">
             <AuthorPage />
          </Route>
          <Route path="/">
