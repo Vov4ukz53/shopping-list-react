@@ -1,10 +1,16 @@
 # Shopping List
 
 In this block you can add products to the list and download example products (just click the "Pobierz przykladowe producty" button).
+
 ![Block_1](https://i.ibb.co/P4BQR8J/Screenshot-1.png)
 
 In the next block you can filter your products.
+
 ![Block_2](https://i.ibb.co/HP2z1Th/Screenshot-2.png)
+
+In this block you can mark the product (click the green button), delete and hide marked products. You can маrked all products (click the "Zaznacz wszystkie" button).
+
+![Block_3](https://i.ibb.co/Bz3DQ7W/Screenshot-3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
