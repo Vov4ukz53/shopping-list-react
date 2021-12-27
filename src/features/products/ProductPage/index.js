@@ -4,7 +4,6 @@ import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import ProductInfo from "./ProductInfo/index";
 
-
 function ProductPage() {
   return (
     <>

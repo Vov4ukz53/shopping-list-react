@@ -6,11 +6,11 @@ import {
    selectProductsByQuery
 } from "../../productsSlice";
 import { List, Item, Content, Button, Link } from "./styled.js";
-import { searchQueryParamsName } from "../searchQueryParamsName";
+import { searchQueryParamName } from "../searchQueryParamName";
 import { useQueryParameter } from "../queryParameters";
 
 const ProductsList = () => {
-   const query = useQueryParameter(searchQueryParamsName);
+   const query = useQueryParameter(searchQueryParamName);
    const products = useSelector(state => selectProductsByQuery(state, query));
    const hideDone = useSelector(selectHideDone);
    const dispatch = useDispatch();
