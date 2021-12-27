@@ -46,8 +46,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Grid
 - CSS
 - JavaScript/ES6+ Features
-- React + Redux
 - Create React App
+- React + Redux
+- Redux-Saga
+- React Router
 - React Hooks
 - Custom Hooks
 - Styled Components
