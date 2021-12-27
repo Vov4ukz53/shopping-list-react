@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import frontend from "./img/frontend.png";
+import frontend from "../img/frontend.png";
 
 export const Wrapper = styled.div`
    display: grid;
@@ -33,7 +33,7 @@ export const Div = styled.div`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
          width: 200px;
-         margin: 0 auto;
+         justify-self: center;
       }
    `}
 `;

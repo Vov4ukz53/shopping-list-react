@@ -1,5 +1,5 @@
 import React from "react";
-import {StyledNavigation, List, Item, Link} from "./styled";
+import { StyledNavigation, List, Item, Link } from "./styled";
 
 function Navigation() {
    return (
