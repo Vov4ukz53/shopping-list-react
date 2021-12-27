@@ -10,7 +10,7 @@ In the next block you can filter your products.
 
 In this block you can mark the product (click the green button), delete and hide marked products. You can маrked all products (click the "Zaznacz wszystkie" button).
 
-![Block_3](https://i.ibb.co/Bz3DQ7W/Screenshot-3.png)
+![Block_3](https://i.ibb.co/nfzRJ6q/Screenshot-3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
