@@ -9,7 +9,7 @@ export const Button = styled.button`
 
    ${({ error }) => error && css`
       color:${({ theme }) => theme.colors.firebrick};
-      text-decoration:none;
+      text-decoration: none;
    `}
 
    &:hover{
@@ -24,7 +24,7 @@ export const Button = styled.button`
       color: rgb(184, 180, 180);
 	   cursor: default;
       &:hover{
-         text-decoration:none;
+         text-decoration: none;
       }
    }
 
