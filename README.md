@@ -53,6 +53,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Styled Components
 
 ### How to use
-![how to use](https://i.ibb.co/KVBh5Fy/Lista-zakupow-react.gif)
+![how to use](https://i.ibb.co/n0xMGr9/httpsi-ibb-co-Cnf6k5h-Lista-zakupow123.gif)
 
 
