@@ -6,7 +6,7 @@ function Navigation() {
       <StyledNavigation>
          <List>
             <Item>
-               <Link to="/producty">Producty</Link>
+               <Link to="/producty">Produkty</Link>
             </Item>
             <Item>
                <Link to="/autor">O autorze</Link>
