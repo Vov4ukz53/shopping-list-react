@@ -1,8 +1,28 @@
 # Shopping List
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Demo
 Here you can see my [demo](https://vov4ukz53.github.io/shopping-list-react/)
+
+In this block you can add products to the list and download example products (just click on the "Pobierz przykladowe producty" button).
+
+![add product](https://i.ibb.co/P4BQR8J/Screenshot-1.png)
+
+In the next block you can filter your products.
+
+![filtering products](https://i.ibb.co/HP2z1Th/Screenshot-2.png)
+
+In this block you can mark the product (click the green button), delete and hide marked products (to hide the marked products you need to click on the "Ukryj zaznaczone" button). Also you can маrked all products (click on the "Zaznacz wszystkie" button).
+
+![product list](https://i.ibb.co/nfzRJ6q/Screenshot-3.png)
+
+If you click on one of the products you will see information about this product.
+
+![product information](https://i.ibb.co/BP6H4LQ/Screenshot-4.png)
+
+If you click on the link "O autorze", you will be able to see a little information about me.
+
+![information about me](https://i.ibb.co/0t8FXjq/Screenshot-5.png)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
