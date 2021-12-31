@@ -70,12 +70,14 @@ export const selectAreProductsNotEmpty = state =>
    selectProducts(state).length > 0;
 
 export const selectAreExampleProducts = state => {
-   const firstId = "8wROpJA5ZbnXAymcQ4IB2";
-   const secondId = "9nnWI7ma6t58_k9hRvRk2";
-   const thirdId = "Z3MfgjbWPl1MGS7TRtDO0";
+   const exampleProductsIds = [
+      "8wROpJA5ZbnXAymcQ4IB2",
+      "9nnWI7ma6t58_k9hRvRk2",
+      "Z3MfgjbWPl1MGS7TRtDO0"
+   ];
 
    return selectProducts(state).some(({ id }) =>
-      id === firstId || id === secondId || id === thirdId
+      exampleProductsIds.includes(id)
    );
 };
 
