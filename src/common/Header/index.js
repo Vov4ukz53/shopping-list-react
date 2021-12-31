@@ -2,11 +2,11 @@ import Container from "../Container/index.js";
 import Navigation from "./Navigation/index.js";
 import { StyledHeader, Body, Logo } from "./styled.js";
 
-const Header = ({ title }) => (
+const Header = ({ logo }) => (
    <StyledHeader>
       <Container>
          <Body>
-            <Logo to="/producty">{title}</Logo>
+            <Logo to="/producty">{logo}</Logo>
             <Navigation />
          </Body>
       </Container>

@@ -1,5 +1,4 @@
 import Container from "../../../common/Container";
-import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import Buttons from "../ProductsPage/Buttons";
 import ExampleProductsButton from "./ExampleProductsButton";
@@ -10,9 +9,6 @@ import Search from "./Search";
 function ProductsPage() {
   return (
     <>
-      <Header
-        title="Lista zakupów"
-      />
       <Container>
         <Section
           title="Dodaj nowy produkt"
