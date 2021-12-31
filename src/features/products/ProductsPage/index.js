@@ -15,7 +15,7 @@ function ProductsPage() {
       />
       <Container>
         <Section
-          title="Dodaj nowy artykuł"
+          title="Dodaj nowy produkt"
           body={<Form />}
           extraHeaderContent={<ExampleProductsButton />}
         />

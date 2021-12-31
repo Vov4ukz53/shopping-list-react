@@ -38,7 +38,7 @@ const Form = () => {
       <StyledForm onSubmit={onFormSubmit}>
          <Input
             type="text" name="product"
-            placeholder="Napisz artykuł!"
+            placeholder="Nazwa produktu"
             value={newProductContent}
             onChange={onProductInputChange}
             ref={inputRef}
