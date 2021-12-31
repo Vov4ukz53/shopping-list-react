@@ -20,17 +20,13 @@ const ExampleProductsButton = () => {
          onClick={() => dispatch(fetchExampleProducts())}
       >
          {
-            (() => {
-               if (error) {
-                  return "Błąd pobierania danych, spróbuj ponownie!";
-               } else if (loading) {
-                  return "Ładowanie...";
-               } else if (areExampleProducts) {
-                  return "Produkty pobrane";
-               } else {
-                  return "Pobierz przykladowe producty";
-               }
-            })()
+            loading
+               ? "Ładowanie..."
+               : areExampleProducts
+                  ? "Produkty pobrane"
+                  : error
+                     ? "Błąd pobierania danych, spróbuj ponownie!"
+                     : "Pobierz przykladowe producty"
          }
       </Button>
    );
