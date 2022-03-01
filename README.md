@@ -2,7 +2,7 @@
 
 Here you can see my [demo](https://vov4ukz53.github.io/shopping-list-react/)
 
-In this block you can add products to the list and download example products (just click on the "Pobierz przykladowe producty" button).
+In this block you can add products to the list and download examples of the products (just click on the "Pobierz przykladowe producty" button).
 
 ![add product](https://i.ibb.co/P4BQR8J/Screenshot-1.png)
 
