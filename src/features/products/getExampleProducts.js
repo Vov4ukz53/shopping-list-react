@@ -5,5 +5,5 @@ export const getExampleProducts = async () => {
       new Error(responce.statusText);
    }
 
-   return await responce.json();
+   return responce.json();
 };
